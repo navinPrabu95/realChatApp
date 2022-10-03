@@ -1,0 +1,71 @@
+.home {
+    background: url('../../Images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+.home-container {
+    background-color:rgba(30, 23, 23, 0.5);
+    width: 500px;
+    margin: 10% auto;
+    height: 60vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    color: white;
+    border-radius: 20px;
+}
+
+.button-groups {
+    width: 50%;
+    margin: 20px auto;
+    background: transparent;
+    position: relative;
+    border-radius: 30px;
+    border: 1px solid orange;
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+.component-groups {
+    width: 90%;
+    margin: 10px auto;
+}
+
+@media only screen and (max-width: 490px) {  
+    .home-container {
+        width: 90%;
+        margin: 10% auto;
+        height: 90vh;
+    }
+    .button-groups {
+        width: 83%;
+        margin: 10px auto;
+        border-radius: 30px;
+    }
+    
+    .toggle-btn {
+        padding: 10px 10px;
+        cursor: pointer;
+        background: transparent;
+        border-radius: 40px;
+        border: 0;
+        outline: none;
+        position: relative;
+    }
+}

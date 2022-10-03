@@ -1,0 +1,51 @@
+.modal-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.modal-body div{
+    margin: 10px;
+}
+.profile-img{
+  width: 80px;
+  height: 80px;
+  border-radius: 200px;
+  margin: 3px 5px;
+}
+
+.group-users-info{
+  display: flex;
+  width: 90%;
+  background-color:springgreen;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+}
+.Group-users-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+@media only screen and (max-width: 490px){
+  .profile-img{
+    width: 50px;
+    height: 50px;
+  }
+  .group-users-info{
+    padding: 5px 10px;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 10px;
+  }
+  .Group-users-image{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+  }
+}
