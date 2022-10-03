@@ -21,7 +21,7 @@ const ProfileModal = ({ user,setUser }) => {
         fData.append('cloud_name', 'naveen1995')
         const { data } = await axios.post("https://api.cloudinary.com/v1_1/naveen1995/image/upload", fData)
 
-      axios.put('http://localhost:7000/user/update',{updateUrl:data.url},{
+      axios.put('/user/update',{updateUrl:data.url},{
         headers: {Authorization: `Bearer ${localStorage.getItem('token')}`},
         }).then((res)=>{
             setUser(res.data.result);

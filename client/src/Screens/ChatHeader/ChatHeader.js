@@ -32,7 +32,7 @@ const ChatHeader = ({fetchAgain,setFetchAgain}) => {
 
     const fetchChat = async() => {
 
-      const{ data} =  await axios.get("http://localhost:7000/chat/fetch",{
+      const{ data} =  await axios.get("/chat/fetch",{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             }

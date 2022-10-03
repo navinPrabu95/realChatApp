@@ -21,7 +21,7 @@ const SearchModal = () => {
 
     const createSearch = () => {
 
-        axios.get(`http://localhost:7000/user/${searchUser}`, {
+        axios.get(`/user/${searchUser}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             }
@@ -33,7 +33,7 @@ const SearchModal = () => {
     }
 
     const createChat=(id)=>{
-        axios.post("http://localhost:7000/chat",{userId:id}, {
+        axios.post("/chat",{userId:id}, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             }

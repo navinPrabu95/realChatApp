@@ -25,7 +25,7 @@ function SignIn() {
 
       e.preventDefault()
       
-      axios.post("http://localhost:7000/signin",{email: loginData.email, password: loginData.password})
+      axios.post("/signin",{email: loginData.email, password: loginData.password})
       .then(result=>{
         const {token,user,sucessMsg} = result.data
         toast.success(sucessMsg, {

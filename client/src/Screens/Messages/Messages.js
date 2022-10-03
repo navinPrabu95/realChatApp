@@ -26,7 +26,7 @@ const Messages = ({fetchAgain,setFetchAgain}) => {
 
   const fetchChat = (selectedChat) => {
     if (selectedChat) {
-      axios.get(`http://localhost:7000/message/${selectedChat._id}`, {
+      axios.get(`/message/${selectedChat._id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         }
@@ -46,7 +46,7 @@ const Messages = ({fetchAgain,setFetchAgain}) => {
 
   const SubmitMessages = () => {
 
-    axios.post("http://localhost:7000/message", { chatId: selectedChat._id, content: inputs }, {
+    axios.post("/message", { chatId: selectedChat._id, content: inputs }, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       }

@@ -22,7 +22,7 @@ const ChatInfoModal = () => {
 
 
     const setRenameGroup = () => {
-        axios.put("http://localhost:7000/chat/rename", { chatId: selectedChat._id, rename: renameInput }, {
+        axios.put("/chat/rename", { chatId: selectedChat._id, rename: renameInput }, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem('token')}`,
             }
@@ -39,7 +39,7 @@ const ChatInfoModal = () => {
         if(selectedChat.groupAdmin._id!==userInfo._id){
             console.log("Only Admin can access");
         }else{
-            axios.put("http://localhost:7000/chat/removeUser", { chatId: selectedChat._id, userId: userId }, {
+            axios.put("/chat/removeUser", { chatId: selectedChat._id, userId: userId }, {
                     headers: {
                       Authorization: `Bearer ${localStorage.getItem('token')}`,
                     }

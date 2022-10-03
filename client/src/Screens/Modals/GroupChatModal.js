@@ -33,7 +33,7 @@ const GroupChatModal = ({fetchAgain,setFetchAgain}) => {
             return;
         }
 
-        axios.get(`http://localhost:7000/user/${e.target.value}`, {
+        axios.get(`/user/${e.target.value}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             }
@@ -60,7 +60,7 @@ const GroupChatModal = ({fetchAgain,setFetchAgain}) => {
         if(!chatName && !userIds){
             console.log("Please enter All fields");
         }else{
-            axios.post("http://localhost:7000/chat/group",
+            axios.post("/chat/group",
         {chatName:chatName,members:JSON.stringify(userIds)},
         {headers: {Authorization: `Bearer ${localStorage.getItem('token')}`,
             } }).then(result=>{

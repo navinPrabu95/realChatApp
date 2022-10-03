@@ -50,7 +50,7 @@ function SignUp() {
               fData.append('cloud_name', 'naveen1995')
               const { data } = await axios.post("https://api.cloudinary.com/v1_1/naveen1995/image/upload", fData)
           
-              axios.post("http://localhost:7000/signup", { name: loginData.name, email: loginData.email, password: loginData.password, pic: data.url })
+              axios.post("/signup", { name: loginData.name, email: loginData.email, password: loginData.password, pic: data.url })
                 .then(result => {
                   toast.success(result.data.sucessMsg, {
                     position: toast.POSITION.TOP_RIGHT

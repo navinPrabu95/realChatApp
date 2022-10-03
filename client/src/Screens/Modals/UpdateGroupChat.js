@@ -18,7 +18,7 @@ const UpdateGroupChat = ({searchShow,setSearchShow}) => {
 
     const createSearch = () => {
 
-        axios.get(`http://localhost:7000/user/${searchUser}`, {
+        axios.get(`/user/${searchUser}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             }
@@ -38,7 +38,7 @@ const UpdateGroupChat = ({searchShow,setSearchShow}) => {
             if(selectedChat.users.find(c=>c._id===userId)){
                 console.log("User Already exist in the group");
             }else{
-                axios.put("http://localhost:7000/chat/addUser", { chatId: selectedChat._id, userId: userId }, {
+                axios.put("/chat/addUser", { chatId: selectedChat._id, userId: userId }, {
                     headers: {
                       Authorization: `Bearer ${localStorage.getItem('token')}`,
                     }
